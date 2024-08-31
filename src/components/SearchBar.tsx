@@ -10,9 +10,11 @@ const SearchBar = (props: Props) => {
   function handleTaskName(e: React.ChangeEvent<HTMLInputElement>) {
     setTaskName(e.target.value)
   }
+
   return (
     <>
       <div className="flex flex-col">
+          <h1 className="text-3xl text-white m-3">New item</h1>
         <div className="flex flex-row">
           <input type="text" className="border-white hover:accent-neutral-700 bg-gray-800 h-8 w-9/12 rounded m-3 outline-none text-white p-3"
             onChange={(e) => handleTaskName(e)}/>
