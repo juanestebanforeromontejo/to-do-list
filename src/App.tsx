@@ -9,10 +9,6 @@ function App() {
     return JSON.parse(localValue)
   });
 
-  // useState() -> x: variable, y: funcion // ITEMS: "["hola","hello"]", => ["hola","hello"]
-  // if false == "false": true, if false === "false": false
-  // toDoList[i] : taskName
-
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(toDoList))
   }, [toDoList])
@@ -27,10 +23,6 @@ function App() {
 
   function onDelete(taskName: string) {
     const newToDoList = toDoList.filter(taskNamef => taskName !== taskNamef);
-    // ["hello", "pato", "hola"]
-    // taskName = "hola"
-    // ["hello", "pato"]
-
     setToDoList(newToDoList);
   }
 
